@@ -229,6 +229,7 @@ namespace Symbio.Base.Model.WebServices.Mock
         public void AddMockup(string url, Stream requestStream, Stream responseStream)
         {
             var response = new MockWebResponse(this, responseStream);
+            response.StatusCode = HttpStatusCode.OK;
             var request = new MockWebRequest(this, url, requestStream, response);
             _mockups.Add(url, request);
         }
@@ -236,6 +237,7 @@ namespace Symbio.Base.Model.WebServices.Mock
         public void AddMockup(string url, Encoding encoding, string requestString, string responseString)
         {
             var response = new MockWebResponse(this, new MemoryStream(encoding.GetBytes(responseString)));
+            response.StatusCode = HttpStatusCode.OK;
             var request = new MockWebRequest(this, url, new MemoryStream(encoding.GetBytes(requestString)), response);
             _mockups.Add(url, request);
         }
@@ -243,6 +245,7 @@ namespace Symbio.Base.Model.WebServices.Mock
         public void AddMockup(string url, byte[] requestData, byte[] responseData)
         {
             var response = new MockWebResponse(this, new MemoryStream(responseData));
+            response.StatusCode = HttpStatusCode.OK;
             var request = new MockWebRequest(this, url, new MemoryStream(requestData), response);
             _mockups.Add(url, request);
         }

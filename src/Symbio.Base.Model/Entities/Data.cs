@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace Symbio.Base.Model.Entities
@@ -66,7 +67,8 @@ namespace Symbio.Base.Model.Entities
                 return null;
 
             var xs = new XmlSerializer(typeof(Data));
-            return (Data)xs.Deserialize(stream);
+            var xr = new StreamReader(stream, Encoding.UTF8);
+            return (Data)xs.Deserialize(xr);
         }
 
         #endregion Public Static Methods
@@ -83,7 +85,8 @@ namespace Symbio.Base.Model.Entities
                 return;
 
             var xs = new XmlSerializer(typeof(Data));
-            xs.Serialize(stream, this);
+            var xw = new StreamWriter(stream, Encoding.UTF8);
+            xs.Serialize(xw, this);
             stream.Flush();
         }
 

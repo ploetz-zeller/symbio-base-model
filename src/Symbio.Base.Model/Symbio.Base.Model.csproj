@@ -53,8 +53,6 @@
     <Compile Include="WebServices\Http\HttpWebRequestFactory.cs" />
     <Compile Include="WebServices\Mock\MockWebRequestFactory.cs" />
     <Compile Include="WebServices\WebRequestFactory.cs" />
-    <Compile Include="Web\Mvc\FromHeaderAttribute.cs" />
-    <Compile Include="Web\Mvc\FromHeaderBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Elements\" />

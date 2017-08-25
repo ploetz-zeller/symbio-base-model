@@ -20,6 +20,7 @@ namespace Symbio.Base.Model.Entities
 
         /// <summary>
         /// Gets or sets the source origin attribute.
+        /// If this property is set to a value, Symbio use this attribute on import to get an existing source entity by comparing the attribute value with the content of the <see cref="SourceOriginKey"/> property.
         /// </summary>
         /// <value>
         /// The source origin attribute.
@@ -29,6 +30,7 @@ namespace Symbio.Base.Model.Entities
 
         /// <summary>
         /// Gets or sets the source origin key.
+        /// If the <see cref="SourceOriginAttribute"/> property is null, Symbio use this property value to get an existing source entity by comparing the origin key of the entity with this value.
         /// </summary>
         /// <value>
         /// The source origin key.
@@ -47,6 +49,7 @@ namespace Symbio.Base.Model.Entities
 
         /// <summary>
         /// Gets or sets the target origin attribute.
+        /// If this property is set to a value, Symbio use this attribute on import to get an existing target entity by comparing the attribute value with the content of the <see cref="TargetOriginKey"/> property.
         /// </summary>
         /// <value>
         /// The target origin attribute.
@@ -56,6 +59,7 @@ namespace Symbio.Base.Model.Entities
 
         /// <summary>
         /// Gets or sets the target origin key.
+        /// If the <see cref="TargetOriginAttribute"/> property is null, Symbio use this property value to get an existing target entity by comparing the origin key of the entity with this value.
         /// </summary>
         /// <value>
         /// The target origin key.

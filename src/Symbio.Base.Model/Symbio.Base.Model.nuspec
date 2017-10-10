@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Symbio.Base.Model</title>
+    <authors>Ploetz + Zeller GmbH</authors>
+    <owners>Ploetz + Zeller GmbH</owners>
+    <projectUrl>https://github.com/ploetz-zeller/symbio-base-model</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>n/a</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags></tags>
+  </metadata>
+</package>

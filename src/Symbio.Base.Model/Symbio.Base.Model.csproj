@@ -57,5 +57,8 @@
   <ItemGroup>
     <Folder Include="Elements\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Symbio.Base.Model.nuspec" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

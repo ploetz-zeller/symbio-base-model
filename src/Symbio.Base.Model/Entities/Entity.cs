@@ -71,6 +71,15 @@ namespace Symbio.Base.Model.Entities
         public File File { get; set; }
 
         /// <summary>
+        /// Gets or sets the import behavior.
+        /// </summary>
+        /// <value>
+        /// The import behavior.
+        /// </value>
+        [XmlAttribute]
+        public ImportBehavior ImportBehavior { get; set; }
+
+        /// <summary>
         /// Gets or sets the origin attribute.
         /// If this property is set to a value, Symbio use this attribute on import to get an existing entity by comparing the attribute value with the content of the <see cref="OriginKey"/> property.
         /// </summary>

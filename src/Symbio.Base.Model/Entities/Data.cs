@@ -13,13 +13,6 @@ namespace Symbio.Base.Model.Entities
     [XmlRoot("Data")]
     public class Data
     {
-        #region Fields
-
-        private List<Entity> _entities = new List<Entity>();
-        private List<Relation> _relations = new List<Relation>();
-
-        #endregion Fields
-
         #region Properties
 
         /// <summary>
@@ -30,11 +23,7 @@ namespace Symbio.Base.Model.Entities
         /// </value>
         [XmlArray("Entities")]
         [XmlArrayItem("Entity")]
-        public List<Entity> Entities
-        {
-            get { return _entities; }
-            set { _entities = value; }
-        }
+        public List<Entity> Entities { get; set; } = new List<Entity>();
 
         /// <summary>
         /// Gets or sets the relations.
@@ -44,11 +33,7 @@ namespace Symbio.Base.Model.Entities
         /// </value>
         [XmlArray("Relations")]
         [XmlArrayItem("Relation")]
-        public List<Relation> Relations
-        {
-            get { return _relations; }
-            set { _relations = value; }
-        }
+        public List<Relation> Relations { get; set; } = new List<Relation>();
 
         #endregion Properties
 
@@ -57,7 +42,7 @@ namespace Symbio.Base.Model.Entities
         #region Public Static Methods
 
         /// <summary>
-        /// Deserializes the specified stream.
+        /// De-serializes the specified stream.
         /// </summary>
         /// <param name="stream">The stream.</param>
         /// <returns></returns>

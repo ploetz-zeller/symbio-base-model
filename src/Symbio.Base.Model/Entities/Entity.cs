@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 namespace Symbio.Base.Model.Entities
 {
     /// <summary>
-    /// An entity. May be everithing from item to file (<see cref="Entity.EntityType"/>).
+    /// An entity. May be everything from item to file (<see cref="Entity.EntityType"/>).
     /// </summary>
     public class Entity
     {
@@ -22,12 +22,6 @@ namespace Symbio.Base.Model.Entities
 
         #endregion Constructors
 
-        #region Fields
-
-        private List<Attribute> _attributes = new List<Attribute>();
-
-        #endregion Fields
-
         #region Properties
 
         /// <summary>
@@ -38,10 +32,7 @@ namespace Symbio.Base.Model.Entities
         /// </value>
         [XmlArray("Attributes")]
         [XmlArrayItem("Attribute")]
-        public List<Attribute> Attributes
-        {
-            get { return _attributes; }
-        }
+        public List<Attribute> Attributes { get; } = new List<Attribute>();
 
         /// <summary>
         /// Gets or sets the entity key.
